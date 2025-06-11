@@ -14,7 +14,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::resource('toko', TokoController::class);
-Route::get('/toko/list', [TokoController::class, 'list'])->name('toko.list');
+Route::get('/list/toko/', [TokoController::class, 'list'])->name('toko.list');
 
 Route::resource('product', ProductController::class);
 
